@@ -17,10 +17,14 @@
     <b><code>docker:stop</code></b><br/>
     Stops one (or more) container, bound by default to the <code>post-integration-test</code> phase
   </p>
-    <p class="fragment">
-      <b><code>docker:push</code></b><br/>
-      Push a data image to a registry
-    </p>
+  <p class="fragment">
+    <b><code>docker:build</code></b><br/>
+    Build a data image
+  </p>
+  <p class="fragment">
+    <b><code>docker:push</code></b><br/>
+    Push data image to a registry
+  </p>
 </section>
 
 <section>
@@ -64,5 +68,6 @@
     <li>Same syntax as for <code>maven-assembly-plugin</code></li>
     <li>Predefined Descriptors</li>
     <li>Data Image exporting <code>/maven</code> as volume</li>
+    <li><code>mergeData</code>: Small data container or merged into Image</li>
   </ul>
 </section>
