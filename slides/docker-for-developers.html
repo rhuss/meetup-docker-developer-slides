@@ -20,18 +20,19 @@
 </section>
 <section>
   <h2>Good Integration Tests are ...</h2>
-  <ul>
-    <li class="fragment"><b>Robust</b><br/>
-      <span class="smaller">Tests should either work always or always fail with the same error if nothing has changed.</span></li>
-    <li class="fragment"><b>Independent</b><br/>
-      <span class="smaller">Tests should have minimal external requirements, self contained builds.</span></li>
-    <li class="fragment"><b>Isolated</b><br/>
-      <span class="smaller">Tests should be able to run in parallel.</span>
-    </li>
-    <li class="fragment"><b>Fast</b><br/>
-      <span class="smaller">Tests should be blazing fast for keeping the feedback loop tight.</span>
-    </li>
-  </ul>
+
+  <p class="first-para fragment"><b>Robust</b><br/>
+    <span class="smaller">Tests should either work always or always fail with the same error if nothing has changed.</span>
+  </p>
+  <p class="fragment"><b>Independent</b><br/>
+    <span class="smaller">Tests should have minimal external requirements, self contained builds.</span>
+  </p>
+  <p class="fragment"><b>Isolated</b><br/>
+    <span class="smaller">Tests should be able to run in parallel.</span>
+  </p>
+  <p class="fragment"><b>Fast</b><br/>
+    <span class="smaller">Tests should be blazing fast for keeping the feedback loop tight.</span>
+  </p>
 </section>
 <section>
   <h2>External Testsystems</h2>
@@ -118,15 +119,6 @@
   <p style="font-size: 120%; margin-top: 20px" class="fragment">and <em><b>can</b></em> be the real thing !</p>
 </section>
 <section>
-  <h2>Shipping Applications</h2>
-  <ul>
-    <li>Applications are put into (passive) <b>data container</b></li>
-    <li>Data containers are linked to a <b>deployment platform</b></li>
-    <li>Data images (== committed containers) are <b>pushed</b> to registries</li>
-    <li>Data containers should be created as part of the build process</li>
-  </ul>
-</section>
-<section>
   <h2>Docker Build Integration</h2>
   <ul>
     <li><b>Jenkins</b> Pre- and Post-Actions for starting/stopping Docker</li>
@@ -138,5 +130,14 @@
     </li>
     <li>Dedicated <b>Maven</b> Plugins</li>
     <li><b>Gradle</b> Plugins</li>
+  </ul>
+</section>
+<section>
+  <h2>Shipping Applications</h2>
+  <ul>
+    <li>Applications are put into (passive) <b>data container</b></li>
+    <li>Data containers are linked to a <b>deployment platform</b></li>
+    <li>Data images (== committed containers) are <b>pushed</b> to registries</li>
+    <li>Data container s</li>
   </ul>
 </section>

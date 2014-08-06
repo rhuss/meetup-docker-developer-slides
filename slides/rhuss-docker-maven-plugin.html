@@ -1,6 +1,6 @@
 <section>
 <h2>rhuss/docker-maven-plugin</h2>
-<p class="fragment"><b>Simple</b> configuration</p>
+<p class="first-para fragment"><b>Simple</b> configuration</p>
 <p class="fragment">Automatic <b>pull</b> of required images</p>
 <p class="fragment">Support for dynamic <b>portmapping</b></p>
 <p class="fragment">Maven <b>artifacts</b> and their dependencies should be available within the container</p>
@@ -9,13 +9,18 @@
 </section>
 <section>
   <h2>Maven Plugin Goals</h2>
-  <ul>
-    <li><b><code>docker:start</code></b><br/>
-      Starts a container, bound by default to the <code>pre-integration-test</code> phase
-    </li>
-    <li><b><code>docker:stop</code></b><br/>Stops one (or more) container, bound by default to the <code>post-integration-test</code> phase</li>
-    <li><b><code>docker:push</code></b><br/>Push a data image to a registry</li>
-  </ul>
+  <p class="first-para fragment">
+    <b><code>docker:start</code></b><br/>
+    Starts a container, bound by default to the <code>pre-integration-test</code> phase
+  </p>
+  <p class="fragment">
+    <b><code>docker:stop</code></b><br/>
+    Stops one (or more) container, bound by default to the <code>post-integration-test</code> phase
+  </p>
+    <p class="fragment">
+      <b><code>docker:push</code></b><br/>
+      Push a data image to a registry
+    </p>
 </section>
 
 <section>
@@ -33,7 +38,7 @@
   &lt;waitHttp>http://localhost:${jolokia.port}/jolokia&lt;/waitHttp>
   <wait>10000</wait>
 
-  <!-- Location of assembly descriptor & name of data image & merge mode -->
+  <!-- Location of assembly descriptor & data image name & merge mode -->
   &lt;assemblyDescriptor>src/main/assembly.xml&lt;/assemblyDescriptor>
   &lt;dataImage>jolokia/agents&lt;/dataImage>
   &lt;mergeData>false&lt;/mergeData>

@@ -199,3 +199,7 @@ div.history-label {
     bottom: 20px;
     right: 90px;
 }
+
+.reveal p.first-para {
+    margin-top: 50px
+}
