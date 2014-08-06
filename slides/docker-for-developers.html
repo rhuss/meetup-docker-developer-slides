@@ -31,7 +31,7 @@
     <span class="smaller">Tests should be able to run in parallel.</span>
   </p>
   <p class="fragment"><b>Fast</b><br/>
-    <span class="smaller">Tests should be blazing fast for keeping the feedback loop tight.</span>
+    <span class="smaller">Tests should be blazing fast for a tight feedback loop.</span>
   </p>
 </section>
 <section>
@@ -53,7 +53,7 @@
     </tr>
     <tr class="fragment">
       <td><b style="text-decoration: line-through">Isolated</b></td>
-      <td>Parallel Tests access the same test systems and might interfere.</td>
+      <td>Parallel tests access the same test systems and might interfere.</td>
     </tr>
     <tr class="fragment">
       <td><b style="text-decoration: line-through">Fast</b></td>
@@ -105,24 +105,34 @@
     </tr>
     <tr class="fragment">
       <td><b>Independent</b></td>
-      <td>No build external requirements except a Docker installation.</td>
+      <td>No build external requirements except a Docker installation required.</td>
     </tr>
     <tr class="fragment">
       <td><b>Isolated</b></td>
-      <td>Perfect isolation for the System Under Test (<b>SUT</b>).</td>
+      <td>Perfect isolation for the System Under Test.</td>
     </tr>
     <tr class="fragment">
       <td><b>Fast</b></td>
       <td>Fast container startup because of OS level virtualization.</td>
     </tr>
   </table>
-  <p style="font-size: 120%; margin-top: 20px" class="fragment">and <em><b>can</b></em> be the real thing !</p>
+  <p style="font-size: 120%; margin-top: 20px" class="fragment">and it <em><b>can</b></em> be the real thing !</p>
+</section>
+<section>
+  <h2>Shipping Applications</h2>
+  <ul>
+    <li>Applications are put into (passive) <b>data container</b></li>
+    <li>Data containers are linked to the <b>target platform container</b></li>
+    <li>Applications are deployed during platform container startup</li>
+    <li>Data images (aka committed containers) are <b>pushed</b> to registries</li>
+    <li>Applications can also be <em>merged</em> together with the deployment container</li>
+  </ul>
 </section>
 <section>
   <h2>Docker Build Integration</h2>
   <ul>
     <li><b>Jenkins</b> Pre- and Post-Actions for starting/stopping Docker</li>
-    <li>Executing an external process from the build
+    <li>Executing an external process from the build via
       <ul style="margin-top: 10px; margin-bottom: 10px">
         <li><code>exec</code> Task in Ant</li>
         <li><code>exec-maven-plugin</code> for Maven</li>
@@ -130,14 +140,5 @@
     </li>
     <li>Dedicated <b>Maven</b> Plugins</li>
     <li><b>Gradle</b> Plugins</li>
-  </ul>
-</section>
-<section>
-  <h2>Shipping Applications</h2>
-  <ul>
-    <li>Applications are put into (passive) <b>data container</b></li>
-    <li>Data containers are linked to a <b>deployment platform</b></li>
-    <li>Data images (== committed containers) are <b>pushed</b> to registries</li>
-    <li>Data container s</li>
   </ul>
 </section>

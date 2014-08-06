@@ -19,11 +19,11 @@
   </p>
   <p class="fragment">
     <b><code>docker:build</code></b><br/>
-    Build a data image
+    Builds a data image
   </p>
   <p class="fragment">
     <b><code>docker:push</code></b><br/>
-    Push data image to a registry
+    Pushes data image to a registry
   </p>
 </section>
 
@@ -38,7 +38,6 @@
   <ports>
      <port>jolokia.port:8080</port>
   </ports>
-
   &lt;waitHttp>http://localhost:${jolokia.port}/jolokia&lt;/waitHttp>
   <wait>10000</wait>
 
@@ -65,9 +64,9 @@
 &lt;/assembly>
   </code></pre>
   <ul>
-    <li>Same syntax as for <code>maven-assembly-plugin</code></li>
+    <li>Same syntax as for <b><code>maven-assembly-plugin</code></b></li>
     <li>Predefined Descriptors</li>
-    <li>Data Image exporting <code>/maven</code> as volume</li>
-    <li><code>mergeData</code>: Small data container or merged into Image</li>
+    <li>Data Image exports <b><code>/maven</code></b> as volume</li>
+    <li><b><code>mergeData</code></b>: Small data container or merged into Image</li>
   </ul>
 </section>
